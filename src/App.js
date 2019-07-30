@@ -1,26 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router-dom';
+import styled from 'styled-components';
+import NavBar from './components/NavBar';
+import Home from './routes/Home';
+import Lines from './routes/Lines';
+import Rectangles from './routes/Rectangles';
+import Circles from './routes/Circles';
+import Paths from './routes/Paths';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const AppContainer = styled.div``;
+
+class App extends React.Component {
+  render() {
+    return (
+      <AppContainer>
+        <NavBar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/lines" exact component={Lines} />
+          <Route path="/rectangles" exact component={Rectangles} />
+          <Route path="/circles" exact component={Circles} />
+          <Route path="/paths" exact component={Paths} />
+        </Switch>
+      </AppContainer>
+    );
+  }
 }
 
 export default App;
