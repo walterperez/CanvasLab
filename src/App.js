@@ -7,6 +7,7 @@ import Lines from './routes/Lines';
 import Rectangles from './routes/Rectangles';
 import Circles from './routes/Circles';
 import Paths from './routes/Paths';
+import ShapeColision from './routes/ShapeColision';
 
 const AppContainer = styled.div``;
 
@@ -21,6 +22,7 @@ class App extends React.Component {
           <Route path="/rectangles" exact component={Rectangles} />
           <Route path="/circles" exact component={Circles} />
           <Route path="/paths" exact component={Paths} />
+          <Route path="/shapecolision" exact component={ShapeColision} />
         </Switch>
       </AppContainer>
     );

@@ -20,7 +20,6 @@ const Menu = styled.div`
 
     &:hover {
       background-color: #1f1f14;
-      color: #ffff99;
     }
   }
 `;
@@ -34,6 +33,7 @@ export default function NavBar() {
         <Link to={'/rectangles'}>Rectangles</Link>
         <Link to={'/circles'}>Circles</Link>
         <Link to={'/paths'}>Paths</Link>
+        <Link to={'/shapecolision'}>ShapeColision</Link>
       </Menu>
     </NavBarComponent>
   );
